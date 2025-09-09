@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:44:15 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/09 16:56:38 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/09 20:11:00 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int					ft_isdigit(int c);
 int					ft_atoi(const char *str);
 void				ft_error(void);
 int					is_sorted(t_stack *a);
+
 
 // SPLIT.C FUNCTIONS
 char				**ft_split(char const *s, char c);
