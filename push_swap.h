@@ -41,4 +41,24 @@ void				stack_add_back(t_stack **a, t_stack *new);
 int					stack_size(t_stack *a);
 void				free_stack(t_stack **a);
 
+// OPERATIONS_SWAP.C FUNCTIONS
+void				sa(t_stack **a);
+void				sb(t_stack **b);
+void				ss(t_stack **a, t_stack **b);
+
+// OPERATIONS_PUSH.C FUNCTIONS
+void				pa(t_stack **a, t_stack **b);
+void				pb(t_stack **a, t_stack **b);
+
+// OPERATIONS_ROTATE.C FUNCTIONS
+void				ra(t_stack **a);
+void				rb(t_stack **b);
+void				rr(t_stack **a, t_stack **b);
+
+// OPERATIONS_REVERSE.C FUNCTIONS
+void				rra(t_stack **a);
+void				rrb(t_stack **b);
+void				rrr(t_stack **a, t_stack **b);
+
+
 #endif
