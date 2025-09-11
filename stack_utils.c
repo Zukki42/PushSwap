@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:57:00 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/09 16:53:25 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/11 15:42:54 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,9 @@ void	stack_add_back(t_stack **a, t_stack *new)
 
 int	stack_size(t_stack *a)
 {
-	int		count;
+	int	count;
 
 	count = 0;
-
 	while (a)
 	{
 		count++;

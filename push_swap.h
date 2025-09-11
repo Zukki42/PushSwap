@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:44:15 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/09 20:11:00 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/11 19:15:01 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_stack
 {
 	int				value;
+	int				index;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -28,7 +29,6 @@ int					ft_isdigit(int c);
 int					ft_atoi(const char *str);
 void				ft_error(void);
 int					is_sorted(t_stack *a);
-
 
 // SPLIT.C FUNCTIONS
 char				**ft_split(char const *s, char c);
@@ -60,5 +60,15 @@ void				rra(t_stack **a);
 void				rrb(t_stack **b);
 void				rrr(t_stack **a, t_stack **b);
 
+// SORT_SMALL.C FUNCTIONS
+void				sort_two(t_stack **a);
+void				sort_three(t_stack **a);
+void				sort_four(t_stack **a, t_stack **b);
+void				sort_small(t_stack **a, t_stack **b);
+
+// INDEXING.C FUNCTIONS
+void				assign_index(t_stack *a);
+int					find_max_index(t_stack *stack);
+int					position_of_index(t_stack *stack, int target);
 
 #endif

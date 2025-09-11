@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:57:52 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/08 14:57:54 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/11 18:14:38 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,11 @@ void	rra(t_stack **a)
 		prev = last;
 		last = last->next;
 	}
-	prev->next = NULL;   // detach last
-	last->next = *a;     // put last before head
-	*a = last;           // update head
+	prev->next = NULL;
+	last->next = *a;
+	*a = last;
 	write(1, "rra\n", 4);
 }
-
 
 void	rrb(t_stack **b)
 {
@@ -52,7 +51,6 @@ void	rrb(t_stack **b)
 	*b = last;
 	write(1, "rrb\n", 4);
 }
-
 
 void	rrr(t_stack **a, t_stack **b)
 {
