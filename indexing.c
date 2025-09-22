@@ -6,12 +6,16 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:57:47 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/11 19:17:49 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/22 15:03:14 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+** give every node a rank (index) based on its value:
+** smallest -> 0, next -> 1, ... largest -> n-1. tidy and normalized. :D
+*/
 void	assign_index(t_stack *a)
 {
 	t_stack	*cur;
@@ -34,6 +38,10 @@ void	assign_index(t_stack *a)
 	}
 }
 
+/*
+** scan the stack and return the biggest index you can find.
+** returns -1 if the stack is empty (sad). D:
+*/
 int	find_max_index(t_stack *stack)
 {
 	int	max;
@@ -50,3 +58,21 @@ int	find_max_index(t_stack *stack)
 	return (max);
 }
 
+/*
+** find where a given index lives in the stack (0-based position).
+** returns -1 if it’s not there (rude!).
+*/
+int	position_of_index(t_stack *stack, int target)
+{
+	int	pos;
+
+	pos = 0;
+	while (stack)
+	{
+		if (stack->index == target)
+			return (pos);
+		pos++;
+		stack = stack->next;
+	}
+	return (-1);
+}

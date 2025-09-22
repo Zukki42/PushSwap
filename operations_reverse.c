@@ -6,12 +6,16 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:57:52 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/11 18:14:38 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/22 15:00:12 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+** reverse rotate A: last node becomes first. smooth slide. :D
+** prints "rra\n".
+*/
 void	rra(t_stack **a)
 {
 	t_stack	*prev;
@@ -32,6 +36,10 @@ void	rra(t_stack **a)
 	write(1, "rra\n", 4);
 }
 
+/*
+** reverse rotate B: same move for stack B. comfy shuffle. :)
+** prints "rrb\n".
+*/
 void	rrb(t_stack **b)
 {
 	t_stack	*prev;
@@ -52,6 +60,10 @@ void	rrb(t_stack **b)
 	write(1, "rrb\n", 4);
 }
 
+/*
+** double reverse rotate: run rra then rrb, then announce "rrr\n".
+** (note: this will print three lines total: rra, rrb, and rrr) D:
+*/
 void	rrr(t_stack **a, t_stack **b)
 {
 	rra(a);

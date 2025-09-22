@@ -6,12 +6,16 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:57:00 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/11 15:42:54 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/22 14:02:24 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+** Make a fresh stack node with given value. if malloc says "nope",
+	we error out. D:
+*/
 t_stack	*stack_new(int value)
 {
 	t_stack	*new;
@@ -24,6 +28,9 @@ t_stack	*stack_new(int value)
 	return (new);
 }
 
+/*
+** Append a node to the end of stack 'a'. handles empty list too (nice!). :D
+*/
 void	stack_add_back(t_stack **a, t_stack *new)
 {
 	t_stack	*last;
@@ -41,6 +48,9 @@ void	stack_add_back(t_stack **a, t_stack *new)
 	last->next = new;
 }
 
+/*
+** Count how many nodes live in this stack. numbers go brrr. :>
+*/
 int	stack_size(t_stack *a)
 {
 	int	count;
@@ -54,6 +64,10 @@ int	stack_size(t_stack *a)
 	return (count);
 }
 
+/*
+** Free the whole stack safely and set the head to NULL. goodbye,
+	little nodes. D:
+*/
 void	free_stack(t_stack **a)
 {
 	t_stack	*tmp;

@@ -6,12 +6,15 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:58:02 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/11 18:05:57 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/22 14:06:42 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+** tiny stack? easy win. if two are out of order, just bonk 'sa' :D
+*/
 void	sort_two(t_stack **a)
 {
 	if (!a || !*a || !(*a)->next)
@@ -20,6 +23,10 @@ void	sort_two(t_stack **a)
 		sa(a);
 }
 
+/*
+** the spicy trio puzzle — handle the 5 unsorted cases with sa/ra/rra.
+** always finishes in a couple moves. chef’s kiss. 😌
+*/
 void	sort_three(t_stack **a)
 {
 	int	a_val;
@@ -49,6 +56,9 @@ void	sort_three(t_stack **a)
 		rra(a);
 }
 
+/*
+** find the node with the smallest value (our VIP guest to push first). ✨
+*/
 static t_stack	*find_min(t_stack *a)
 {
 	t_stack	*min;
@@ -63,6 +73,10 @@ static t_stack	*find_min(t_stack *a)
 	return (min);
 }
 
+/*
+** for four: rotate the smallest to the top, push to B, sort the remaining 3,
+** then pull it back. neat lil’ routine. :D
+*/
 void	sort_four(t_stack **a, t_stack **b)
 {
 	t_stack	*min;
@@ -82,6 +96,9 @@ void	sort_four(t_stack **a, t_stack **b)
 	pa(a, b);
 }
 
+/*
+** wrapper for baby stacks: dispatch to the right tiny strategy. go go go!
+*/
 void	sort_small(t_stack **a, t_stack **b)
 {
 	int	size;
