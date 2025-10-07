@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 15:02:07 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/22 14:04:25 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/26 10:13:06 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 /*
 ** classic strlen — count bytes in 's' before the terminating '\0'.
-** yes, we walk the whole thing. cardio time. 🏃‍♂️
+** yes, we walk the whole thing. cardio time. 
 */
 size_t	ft_strlen(const char *s)
 {

@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:57:32 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/22 14:49:46 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/07 23:17:30 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void	rb(t_stack **b)
 
 /*
 ** double rotate: rotate both A and B together, but only say "rr\n".
-** no extra chatter from ra/rb — clean and synchronized. 🚀
 */
 void	rr(t_stack **a, t_stack **b)
 {

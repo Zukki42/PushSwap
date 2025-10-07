@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:58:23 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/22 14:02:05 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/09/26 10:14:17 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_error(void)
 ** Super strict ASCII-to-int (no funny business >:|).
 ** - Skips leading whitespace
 ** - Optional +/-
-** - Requires at least one digit (no lonely '+' or '-'!) D:
+** - Requires at least one digit (no lonely '+' or '-'!)
 ** - Checks 32-bit overflow/underflow
 ** - Fails if trailing junk remains
 ** Returns the parsed int if everything is squeaky clean. :)

@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:58:02 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/22 14:06:42 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/07 23:21:20 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	sort_two(t_stack **a)
 
 /*
 ** the spicy trio puzzle — handle the 5 unsorted cases with sa/ra/rra.
-** always finishes in a couple moves. chef’s kiss. 😌
+** always finishes in a couple moves. chef’s kiss.
 */
 void	sort_three(t_stack **a)
 {
@@ -57,7 +57,7 @@ void	sort_three(t_stack **a)
 }
 
 /*
-** find the node with the smallest value (our VIP guest to push first). ✨
+** find the node with the smallest value (our VIP guest to push first).
 */
 static t_stack	*find_min(t_stack *a)
 {
@@ -110,4 +110,6 @@ void	sort_small(t_stack **a, t_stack **b)
 		sort_three(a);
 	else if (size == 4)
 		sort_four(a, b);
+	else if (size == 5)
+		sort_five(a, b);
 }

@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:44:15 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/21 19:09:28 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/07 23:21:04 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ t_stack				*stack_new(int value);
 void				stack_add_back(t_stack **a, t_stack *new);
 int					stack_size(t_stack *a);
 void				free_stack(t_stack **a);
-// Uncomment if you moved this helper out of sort_small.c
-// t_stack *find_min(t_stack *a);
 
 // OPERATIONS_SWAP.C
 void				sa(t_stack **a);
@@ -67,6 +65,9 @@ void				sort_two(t_stack **a);
 void				sort_three(t_stack **a);
 void				sort_four(t_stack **a, t_stack **b);
 void				sort_small(t_stack **a, t_stack **b);
+
+// SORT_FIVE.C
+void				sort_five(t_stack **a, t_stack **b);
 
 // INDEXING.C
 void				assign_index(t_stack *a);

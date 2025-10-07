@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:56:12 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/22 14:50:43 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/07 23:38:21 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int	main(int argc, char **argv)
 {
 	t_stack	*a;
 	t_stack	*b;
+	int		n;
 
 	a = NULL;
 	b = NULL;
@@ -100,10 +101,12 @@ int	main(int argc, char **argv)
 		free_stack(&a);
 		return (0);
 	}
-	if (stack_size(a) <= 4)
+	n = stack_size(a);
+	if (n <= 5)
 		sort_small(&a, &b);
 	else
 	{
+		assign_index(a);
 		sort_k(&a, &b);
 	}
 	free_stack(&a);
