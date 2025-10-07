@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:56:12 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/10/07 23:38:21 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/08 00:19:53 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,11 @@ static t_stack	*parse_args(int argc, char **argv)
 	i = 1;
 	while (i < argc)
 	{
+		is_valid(a);
+		check_duplicates(a);
 		add_numbers_to_stack(argv[i], &a);
 		i++;
 	}
-	check_duplicates(a);
 	return (a);
 }
 

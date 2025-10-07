@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:44:15 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/10/07 23:21:04 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/08 00:20:33 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ t_stack				*stack_new(int value);
 void				stack_add_back(t_stack **a, t_stack *new);
 int					stack_size(t_stack *a);
 void				free_stack(t_stack **a);
+int					is_valid(const char *s);
 
-// OPERATIONS_SWAP.C
+	// OPERATIONS_SWAP.C
 void				sa(t_stack **a);
 void				sb(t_stack **b);
 void				ss(t_stack **a, t_stack **b);

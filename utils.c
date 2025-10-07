@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:58:23 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/09/26 10:14:17 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/08 00:19:44 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_error(void)
 ** - Fails if trailing junk remains
 ** Returns the parsed int if everything is squeaky clean. :)
 */
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *a)
 {
 	int		i;
 	int		sign;
@@ -49,20 +49,20 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+	while ((a[i] >= 9 && a[i] <= 13) || a[i] == ' ')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
-		if (str[i++] == '-')
+	if (a[i] == '-' || a[i] == '+')
+		if (a[i++] == '-')
 			sign = -1;
-	if (!ft_isdigit(str[i]))
+	if (!ft_isdigit(a[i]))
 		ft_error();
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(a[i]))
 	{
-		result = result * 10 + (str[i++] - '0');
+		result = result * 10 + (a[i++] - '0');
 		if ((result * sign) > 2147483647 || (result * sign) < -2147483648)
 			ft_error();
 	}
-	if (str[i] != '\0')
+	if (a[i] != '\0')
 		ft_error();
 	return ((int)(result * sign));
 }
@@ -79,6 +79,29 @@ int	is_sorted(t_stack *a)
 		if (a->value > a->next->value)
 			return (0);
 		a = a->next;
+	}
+	return (1);
+}
+
+/*
+1. takes care of the minus and pluses and fixes the leak so you take care of special cases
+*/
+int	is_valid(const char *s)
+{
+	int	i;
+
+	if (!s || !*s)
+		return (0);
+	i = 0;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
+	if (!s[i]) // sign only -> invalid
+		return (0);
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+			return (0);
+		i++;
 	}
 	return (1);
 }
