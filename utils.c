@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:58:23 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/10/08 00:19:44 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/11 03:42:48 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int	is_valid(const char *s)
 	i = 0;
 	if (s[i] == '+' || s[i] == '-')
 		i++;
-	if (!s[i]) // sign only -> invalid
+	if (!s[i])
 		return (0);
 	while (s[i])
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 14:44:15 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/10/08 00:20:33 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/11 03:56:18 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ typedef struct s_stack
 	int				index;
 	struct s_stack	*next;
 }					t_stack;
+
+// PARSING.C //
+int   has_duplicates(t_stack *a);
+void  add_numbers_to_stack(char *arg, t_stack **a);
+
 
 // UTILS.C
 int					ft_isdigit(int c);

@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+         #
+#    By: bavirgil <bavirgil@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/11 18:40:11 by bavirgil          #+#    #+#              #
-#    Updated: 2025/10/07 23:21:59 by bavirgil         ###   ########.fr        #
+#    Updated: 2025/10/11 03:56:31 by bavirgil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRCS = push_swap.c \
        split.c \
        stack_utils.c \
        utils.c \
-       sort_five.c 
+       sort_five.c \
+	   parsing.c 
 
 # Objects
 OBJS = $(SRCS:.c=.o)
